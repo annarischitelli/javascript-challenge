@@ -12,9 +12,9 @@ var columns = ["datetime", "city", "state", "country", "shape", "durationMinutes
 
 // Add all data to HTML for initial preview of sightings
 var inputData = function (fillTable) {
-  fillTable.forEach(UFOEvents => {
+  fillTable.forEach(UFOsightings => {
     var row = tableBody.append("tr");
-    columns.forEach(column => row.append("td").text(UFOEvents[column])
+    columns.forEach(column => row.append("td").text(UFOsightings[column])
     )});
 }
 inputData(tableData);
