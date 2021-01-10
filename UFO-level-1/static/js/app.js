@@ -29,10 +29,12 @@ button.on("click", () => {
   // console.log(inputdate)
   // Create the variable that will filter the UFO data on user input
   var filterDate = tableData.filter(tableData => tableData.datetime === inputdate);
+  // Clear table to ensure it's a clean command
   tableBody.html("");
-  var response = {filterDate}
+  // Create the variable for the filtered date
+  var userRequest = {filterDate}
 
-  if (response.filterDate.length !== 0) {
+  if (userRequest.filterDate.length !== 0) {
     inputData(filterDate);
   }
 
