@@ -23,8 +23,11 @@ inputData(tableData);
 button.on("click", () => {
   // Boilerplate to stop page from reload
   d3.event.preventDefault();
+  // Create the variable to hold the user input date
   var inputdate = userdate.property("value");
-  console.log(inputdate)
+  // Check to make sure it's recording the date
+  // console.log(inputdate)
+  // Create the variable that will filter the UFO data on user input
   var filterDate = tableData.filter(tableData => tableData.datetime === inputdate);
   tableBody.html("");
   var response = {filterDate}
